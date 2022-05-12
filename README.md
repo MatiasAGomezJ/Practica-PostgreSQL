@@ -41,6 +41,7 @@ Para acabar el comienzo, podemos entrar en la base de datos de 2 maneras:
 $ docker exec -it postgress_db_1 bash
 ```
 > Este comando nos deja entrar en el contenedor de la base de datos con la shell `bash`.
+> 
 > Para saber a que contenedor entrar haremos `docker ps` que lista todos los contenedores abiertos.
 
 ![](https://i.imgur.com/u9eCCMJ.png)
@@ -67,6 +68,7 @@ Para ello, en la consola del SO del contenedor, ejecutaremos el siguiene comando
 $ createuser alumne --pasword
 ```
 > `alumne`: nombre del usuario que vamos a crear
+> 
 > `password`: preguntará por una contraseña para el usuario
 
 ![](https://i.imgur.com/NGO6CUX.png)
@@ -77,7 +79,9 @@ Para crear un usuario con permisos de superusuario simplemente añadiremos el pa
 $ createuser alumne0 --pasword -s
 ```
 > `alumne0`: nombre del usuario que vamos a crear
+> 
 > `password`: preguntará por una contraseña para el usuario
+> 
 > `-s`: creará el usuario con poderes de administrador
 
 ![](https://i.imgur.com/2WUgpgv.png)
@@ -88,7 +92,9 @@ En bash ejecutaremos el siguiente comando.
 $ createdb aludb -O alumne0
 ```
 > `aludb`: nombre de la db que vamos a crear
+> 
 > `-O`: sirve para indicar el nombre del propietario de la db
+> 
 > `alumne0`: el propetario de la db
  
 ![](https://i.imgur.com/oPiU1Y0.png)
@@ -122,6 +128,7 @@ Primero entraremos a la base de datos como `alumne0`:
 \c aludb alumne0
 ```
 > `aludb`: db a la que nos conectaremos
+> 
 > `alumne0`: usuario con la que se conectará
 
 ![](https://i.imgur.com/yS16eju.png)
@@ -172,7 +179,9 @@ Para poder dar diversos permisos a otros usuarios en una tabla deveremos entrar 
 GRANT SELECT ON R TO alumne;
 ```
 > `SELECT`: es el tipo de permisos que vamos a conceder. Que?
+> 
 > `ON R`: en que tabla los vamos a conceder. Donde?
+> 
 > `TO alumne`: a quien se lo vamos a conceder. Quien?
 
  ![](https://i.imgur.com/Uj2QEI6.png)
